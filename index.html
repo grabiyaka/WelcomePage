@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nova+Square&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Hello World!</h1>
+        <div class="description"> 
+            Hello, everyone! My name is Ilya, and this is my first website. Soon, I'll be sharing my resume here as a Full-Stack developer.
+        </div>
+        <div class="description">
+            My social medias:
+        </div>
+        <div class="social-icons">
+            <a href="https://instagram.com/h._elijah_?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" class="social-icon"><img src="icons/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/grabiyaka" target="_blank" class="social-icon"><img src="icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/illya-herasimets-564653255/" target="_blank" class="social-icon"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://t.me/h_elijah" target="_blank" class="social-icon"><img src="icons/telegram.png" alt="Telegram"></a>
+        </div>
+          
+          
+    </div>
+</body>
+
+<style>
+
+    body{
+        background: linear-gradient(45deg, #2d3047, #0f0326);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #29d8d5;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    h1{
+        font-family: 'Lato', sans-serif;
+        font-family: 'Nova Square', sans-serif;
+        font-size: 3em;
+        text-align: center;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .description {
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.5;
+        color: #a3a5aa;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+    }
+
+    .description a {
+        color: #29d8d5;
+        text-decoration: none;
+        border-bottom: 1px solid #29d8d5;
+        transition: border-bottom 0.3s ease-in-out;
+    }
+
+    .description a:hover {
+        border-bottom: 2px solid #29d8d5;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-icon {
+        display: inline-block;
+        margin: 0 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.1);
+    }
+
+
+
+</style>
+
+</html>
