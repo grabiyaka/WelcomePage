@@ -1,150 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elijah</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nova+Square&display=swap" rel="stylesheet">
+    <title>Illia's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="app">
-        <h1>Hello World!</h1>
-        <div class="description"> 
-            Hello, everyone! My name is Illia, and this is my website.
+    <div class="header">
+        <div class="name-info">
+            <img src="icons/me.jpg" alt="Illia's Photo">
+            <h1>Herasymets Illia</h1>
         </div>
-        <div class="description">    
-            I am a full-stack developer with over a year of commercial experience. I can assist with an existing project or create a new one from scratch.
+        <div class="theme-switch">
+            <span class="sun">🌞</span>
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"><span></span></label>
+            <span class="moon">🌜</span>
         </div>
-        <h2>Professional Summary:</h2>
-        <div class="info-block">
-            <div class="description">
-                <h2>Work Experience</h2>
-                <ul>
-                    <li>Save-Health (2022)</li>
-                    <li><a href="https://amrita-shop.kiev.ua/">Amrita</a> (July 2022 - March 2023)</li>
-                    <li><a href="https://cac-tour.com">Cac-Tour</a>/<a href="https://cac-edu.com.ua">Cac-Edu</a> (October 2023)</li>
-                    <li><a href="https://estet.prom.ua/ua/">Estet.prom.ua</a> (June 2023 - Now)</li>
-                    <li><a href="https://www.redbird.cafe">RedBird.cafe</a> (November-December 2023)</li>
-                </ul>
-            </div>  
-            <div class="description">
-                <h2>Tehnologies Studied</h2>
-                <ul>
-                    <li>PHP (Laravel, Slim)</li>
-                    <li>Python</li>
-                    <li>JS (Vue, VueX, Pinia)</li>
-                    <li>HTML/CSS</li>
-                    <li>SQL (MySQL, SQLite)</li>
-                    <li>Git/Github</li>
-                </ul>    
-            </div>
-            <div class="description">
-                <h2>Pet Projects</h2>
-                <ul>
-                    <li><a href="https://forum.elijah.kiev.ua" target="_blank">forum.elijah.kiev.ua</a></li>
-                </ul>
-            </div>
-        </div>
-        <footer>
-            <h2>Contact</h2>
-            <div class="description">
-                Email: <a href="mailto:illya.gerasimets@gmail.com">illya.gerasimets@gmail.com</a> or my social medias:
-            </div>
-            <div class="social-icons">
-                <a href="https://instagram.com/h._elijah_?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" class="social-icon"><img src="icons/instagram.png" alt="Instagram"></a>
-                <a href="https://github.com/grabiyaka" target="_blank" class="social-icon"><img src="icons/github.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/illya-herasimets-564653255/" target="_blank" class="social-icon"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://t.me/h_elijah" target="_blank" class="social-icon"><img src="icons/telegram.png" alt="Telegram"></a>
-            </div>
-        </footer>
     </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-info"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>Hello, everyone! My name is Illia, and this is my website.</h1>
+            <p>I am a full-stack developer with over a year of commercial experience. I can assist with an existing
+                project or create a new one from scratch.</p>
+
+            <div class="block-container">
+                <div class="block">
+                    <h2>Work Experience</h2>
+                    <ul id="work-experience-list">
+                        <li data-info="Save-Health (2022)">Save-Health (2022)</li>
+                        <li><a href="https://amrita-shop.kiev.ua/">Amrita</a> (July 2022 - March 2023)</li>
+                        <li><a href="https://cac-tour.com">Cac-Tour</a>/<a href="https://cac-edu.com.ua">Cac-Edu</a>
+                            (October 2023)</li>
+                        <li><a href="https://estet.prom.ua/ua/">Estet.prom.ua</a> (June 2023 - Now)</li>
+                        <li><a href="https://www.redbird.cafe">RedBird.cafe</a> (November-December 2023)</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h2>Technologies Studied</h2>
+                    <ul>
+                        <li>PHP (Laravel, Slim)</li>
+                        <li>Python (Flask)</li>
+                        <li>JS (Vue, VueX, Pinia)</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL (MySQL, SQLite)</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+
+                <div class="block">
+                    <h2>Pet Projects</h2>
+                    <ul>
+                        <li><a href="http://forum.elijah.kiev.ua" target="_blank">forum.elijah.kiev.ua</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Contact</p>
+        <p>Email: illya.gerasimets@gmail.com or my social medias:</p>
+        <div class="social-icons">
+            <a href="https://github.com/grabiyaka" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/illya-herasimets-564653255/" target="_blank"><img
+                    src="icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.upwork.com/freelancers/~011d714c30e759a68e" target="_blank"><img src="icons/upwork.png"
+                    alt="Upwork"></a>
+            <a href="https://instagram.com/h._elijah_?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank"><img
+                    src="icons/instagram.png" alt="Instagram"></a>
+            <a href="https://t.me/h_elijah" target="_blank"><img src="icons/telegram.png" alt="Telegram"></a>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-theme');
+        });
+
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('theme') === 'dark') {
+            themeToggle.checked = true;
+            body.classList.add('dark-theme');
+        } else {
+            themeToggle.checked = false;
+            body.classList.remove('dark-theme');
+        }
+
+        // Save user preference on theme change
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        // Получаем модальное окно и элементы списка
+        var modal = document.getElementById("modal");
+        var modalContent = document.querySelector(".modal-content");
+        var workExperienceList = document.getElementById("work-experience-list");
+
+        // При нажатии на элемент списка
+        workExperienceList.addEventListener("click", function (e) {
+            // Проверяем, что был нажат элемент списка
+            if (e.target && e.target.nodeName == "LI") {
+                var info = e.target.getAttribute("data-info");
+                // Показываем модальное окно с информацией с анимацией
+                document.getElementById("modal-info").innerHTML = info;
+                modal.classList.add("active");
+                modalContent.classList.add("active");
+            }
+        });
+
+        // Закрытие модального окна при нажатии на крестик
+        var closeBtn = document.getElementsByClassName("close")[0];
+        closeBtn.onclick = function () {
+            // Закрываем модальное окно с анимацией
+            modal.classList.remove("active");
+            modalContent.classList.remove("active");
+        }
+
+
+    </script>
 </body>
-
-<style>
-
-    body{
-        background: linear-gradient(45deg, #2d3047, #0f0326);
-        margin: 0;
-        display: flex;
-        height: 100%;
-        color: #29d8d5;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #app{
-        width: 100%;
-    }
-    
-    h1, h2{
-        font-family: 'Lato', sans-serif;
-        font-family: 'Nova Square', sans-serif;
-        text-align: center;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    h1{
-        font-size: 3em;
-    }
-
-    .description {
-        text-align: center;
-        font-size: 1.2em;
-        line-height: 1.5;
-        color: #a3a5aa;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-        margin: 10px;
-    }
-
-    footer{
-        padding: 10px;
-        background-color: #0f0326;
-    }
-
-    .description a {
-        color: #29d8d5;
-        text-decoration: none;
-        border-bottom: 1px solid #29d8d5;
-        transition: border-bottom 0.3s ease-in-out;
-    }
-
-    .description a:hover {
-        border-bottom: 2px solid #29d8d5;
-    }
-
-    .info-block{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .social-icons {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .social-icon {
-        display: inline-block;
-        margin: 0 10px;
-        border-radius: 50%;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .social-icon img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .social-icon:hover {
-        transform: scale(1.1);
-    }
-
-
-
-</style>
 
 </html>
