@@ -12,7 +12,11 @@
 <body>
     <div class="header">
         <div class="name-info">
-            <img src="icons/me.jpg" alt="Illia's Photo">
+            <img src="icons/me.jpg" alt="Illia's Photo" id="profile-photo">
+            
+            <div class="modal-photo" id="modal-photo">
+                <img src="icons/me.jpg" alt="Illia's Photo">
+            </div>
             <h1>Herasymets Illia</h1>
         </div>
         <div class="theme-switch">
@@ -23,10 +27,13 @@
         </div>
     </div>
 
+
     <div id="modal" class="modal">
+        <div id="modal-background"></div>
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-title"></h2>
+            <p id="link"></p>
             <p id="modal-info" class="typing"></p>
         </div>
     </div>
