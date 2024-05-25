@@ -147,6 +147,7 @@ body {
 
 .block a {
     color: #1e90ff;
+    color: #1e90ff;
     text-decoration: none;
 }
 
@@ -162,6 +163,10 @@ body {
 
 .footer {
     flex-direction: column;
+}
+
+.footer a{
+    color: #1e90ff;
 }
 
 .social-icons {
