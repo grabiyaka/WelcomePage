@@ -216,6 +216,15 @@ body {
     opacity: 0;
 }
 
+.dark-theme .close{
+    color: #121212;
+}
+
+.dark-theme .modal-content{
+    color: #121212;
+}
+
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -233,17 +242,22 @@ body {
 .modal-content {
     background-color: #fefefe;
     width: 80%;
-    max-width: 400px;
-    /* Ширина модального окна */
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    /* По умолчанию модальное окно скрыто справа */
-    overflow-y: auto;
+    max-width: 600px;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     box-sizing: border-box;
-    transition: left 0.3s ease;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(-50px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content p{
+    animation: typing 4s steps(60, end);
 }
 
 .modal.active {
@@ -252,10 +266,36 @@ body {
 }
 
 .modal-content.active {
-    left: 0;
-    visibility: visible;
     opacity: 1;
+    transform: translate(-50%, -50%);
 }
+
+
+/* @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing {
+    overflow: hidden;
+    white-space: pre-wrap; 
+    border-right: 3px solid;
+    animation: typing 4s steps(60, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+} */
+
 
 
 @media (max-width: 768px) {

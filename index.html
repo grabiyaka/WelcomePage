@@ -23,11 +23,11 @@
         </div>
     </div>
 
-    <!-- Модальное окно -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p id="modal-info"></p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-info" class="typing"></p>
         </div>
     </div>
 
@@ -41,17 +41,16 @@
                 <div class="block">
                     <h2>Work Experience</h2>
                     <ul id="work-experience-list">
-                        <li data-info="Save-Health (2022)">Save-Health (2022)</li>
-                        <li><a href="https://amrita-shop.kiev.ua/">Amrita</a> (July 2022 - March 2023)</li>
-                        <li><a href="https://cac-tour.com">Cac-Tour</a>/<a href="https://cac-edu.com.ua">Cac-Edu</a>
-                            (October 2023)</li>
-                        <li><a href="https://estet.prom.ua/ua/">Estet.prom.ua</a> (June 2023 - Now)</li>
-                        <li><a href="https://www.redbird.cafe">RedBird.cafe</a> (November-December 2023)</li>
+                        <li data-id="1">Save-Health (2022)</li>
+                        <li data-id="2">Amrita (July 2022 - March 2023)</li>
+                        <li data-id="3">Cac-Tour/Cac-Edu (October 2023)</li>
+                        <li data-id="4">Estet.prom.ua (June 2023 - Now)</li>
+                        <li data-id="5">RedBird.cafe (November-December 2023)</li>
                     </ul>
                 </div>
 
                 <div class="block">
-                    <h2>Technologies Studied</h2>
+                    <h2>Stack</h2>
                     <ul>
                         <li>PHP (Laravel, Slim)</li>
                         <li>Python (Flask)</li>
@@ -87,58 +86,7 @@
         </div>
     </div>
 
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        themeToggle.addEventListener('change', () => {
-            body.classList.toggle('dark-theme');
-        });
-
-        // Check for saved user preference, if any, on load of the website
-        if (localStorage.getItem('theme') === 'dark') {
-            themeToggle.checked = true;
-            body.classList.add('dark-theme');
-        } else {
-            themeToggle.checked = false;
-            body.classList.remove('dark-theme');
-        }
-
-        // Save user preference on theme change
-        themeToggle.addEventListener('change', () => {
-            if (themeToggle.checked) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        // Получаем модальное окно и элементы списка
-        var modal = document.getElementById("modal");
-        var modalContent = document.querySelector(".modal-content");
-        var workExperienceList = document.getElementById("work-experience-list");
-
-        // При нажатии на элемент списка
-        workExperienceList.addEventListener("click", function (e) {
-            // Проверяем, что был нажат элемент списка
-            if (e.target && e.target.nodeName == "LI") {
-                var info = e.target.getAttribute("data-info");
-                // Показываем модальное окно с информацией с анимацией
-                document.getElementById("modal-info").innerHTML = info;
-                modal.classList.add("active");
-                modalContent.classList.add("active");
-            }
-        });
-
-        // Закрытие модального окна при нажатии на крестик
-        var closeBtn = document.getElementsByClassName("close")[0];
-        closeBtn.onclick = function () {
-            // Закрываем модальное окно с анимацией
-            modal.classList.remove("active");
-            modalContent.classList.remove("active");
-        }
-
-
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
