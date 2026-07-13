@@ -55,12 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var modal = document.getElementById("modal");
     var modalContent = document.querySelector(".modal-content");
-    var workExperienceList = document.getElementById("work-experience-list");
     var modalBackground = document.getElementById('modal-background')
 
-    workExperienceList.addEventListener("click", function (e) {
-        if (e.target && e.target.nodeName == "LI") {
-            var id = e.target.getAttribute("data-id");
+    document.querySelectorAll("[data-id]").forEach(function (experienceItem) {
+        experienceItem.addEventListener("click", function () {
+            var id = experienceItem.getAttribute("data-id");
 
             let name;
             let description;
@@ -87,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             modal.classList.add("active");
             modalContent.classList.add("active");
-        }
+        });
     });
 
     // Закрытие модального окна при нажатии на крестик
@@ -108,36 +107,59 @@ document.addEventListener("DOMContentLoaded", function () {
 let projects_info = [
     {
         id: 1,
-        name: 'Save-Health (2022)',
-        description: 'A site with an authorization and registration system, where each user has a personal account where you can add customer cards, each card is made according to a special form. In this form, you can also upload images on which you can put dots, and the program will calculate the angle between the dots.',
+        name: 'GoldenStay Property Management Platform',
+        description: `
+            Production property management platform connected to multiple reservation channels, including Airbnb, Booking.com and other providers through Rentals United integration.
+            <br><br>
+            <strong>Responsibilities</strong>
+            <ul>
+                <li>Developed and maintained customer-facing web applications and internal management tools.</li>
+                <li>Built and maintained a guest portal with secure token-based authentication, reservation management and an AI assistant integrated with property-specific information.</li>
+                <li>Designed and implemented secure REST APIs supporting new business functionality and third-party integrations.</li>
+                <li>Expanded the database schema by introducing new entities and relationships for new product features.</li>
+                <li>Developed a custom WordPress plugin to synchronize external websites with the internal booking platform through protected API endpoints.</li>
+                <li>Supported production deployments and application maintenance using Linux, Nginx, TLS certificates and GitHub Actions.</li>
+                <li>Collaborated within a cross-functional development team working on a shared production codebase.</li>
+            </ul>
+            <strong>Environment</strong>
+            <br>
+            JavaScript &bull; Fastify &bull; Vue.js &bull; Pinia &bull; Prisma &bull; MySQL &bull; EJS &bull; Linux &bull; Nginx &bull; GitHub Actions
+        `,
         pictures: [],
         link: ''
     },
     {
         id: 2,
+        name: 'Save-Health (2022)',
+        description: 'Commercial web application with user authentication, personal accounts and form-based customer records. Built features across the application and supported backend functionality.',
+        pictures: [],
+        link: ''
+    },
+    {
+        id: 3,
         name: 'Amrita (July 2022 - March 2023)',
-        description: 'Amrita - An online store for beauty and health products. I joined an existing project, worked on bug fixes and adding new features. Additionally, I migrated the project to the Laravel architecture.',
+        description: 'E-commerce website for beauty and health products. Joined an existing commercial project, fixed bugs, added features and supported backend improvements.',
         pictures: [],
         link: '<a target="_blank" href="https://amrita-shop.kiev.ua/">https://amrita-shop.kiev.ua/</a>'
     },
     {
-        id: 3,
+        id: 4,
         name: 'Cac-Tour/Cac-Edu (October 2023)',
-        description: 'Cac-Tour/Cac-Edu - Two similar websites for selling tours and educational services for Ukrainian users. I joined an existing project and was responsible for bug fixes and website improvements for a month.',
+        description: 'Commercial websites for tours and educational services. Worked on bug fixes, content-related improvements and website maintenance.',
         pictures: [],
         link: '<a target="_blank" href="https://cac-tour.com">https://cac-tour.com</a> and <a href="https://cac-edu.com.ua">https://cac-edu.com.ua</a>'
     },
     {
-        id: 4,
+        id: 5,
         name: 'Estet.prom.ua (June 2023 - Now)',
-        description: ' Estet-Prom - An online store with a wide variety of products and categories.I served as a backend developer, responsible for parsing products from various websites and XML files, filtering the obtained products, and similar tasks. Specifically for the store, I developed a web site that runs on Flask (Python) and interacts with users via web sockets, featuring a separate admin panel.',
+        description: 'E-commerce automation work focused on backend data processing, product parsing from websites and XML files, filtering logic and admin tooling.',
         pictures: [],
         link: '<a target="_blank" href="https://estet.prom.ua/ua/">https://estet.prom.ua/ua/</a>'
     },
     {
-        id: 5,
+        id: 6,
         name: 'RedBird.cafe (November-December 2023)',
-        description: 'RedBird - A unique website for a restaurant chain where dishes are recommended to you by artificial intelligence based on your preferences and restrictions.I joined an existing project and was responsible for bug fixes and website improvements for two months.',
+        description: 'Restaurant website project with AI-assisted dish recommendations. Joined an existing project and worked on bug fixes and website improvements.',
         pictures: [],
         link: '<a target="_blank" href="https://www.redbird.cafe">https://www.redbird.cafe</a>'
     },
