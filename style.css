@@ -44,7 +44,6 @@ body {
     font-size: 1.5em;
     line-height: 1.15;
     max-width: calc(100vw - 250px);
-    width: min-content;
 }
 
 .theme-switch {
