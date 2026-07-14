@@ -107,60 +107,82 @@ document.addEventListener("DOMContentLoaded", function () {
 let projects_info = [
     {
         id: 1,
-        name: 'GoldenStay Property Management Platform',
+        name: 'GoldenStay',
         description: `
-            Production property management platform connected to multiple reservation channels, including Airbnb, Booking.com and other providers through Rentals United integration.
+            <strong>Full-Stack Developer</strong><br>
+            Dec 2024 &mdash; Present
             <br><br>
-            <strong>Responsibilities</strong>
+            Production property management and booking platform connected to Airbnb, Booking.com and other reservation channels through Rentals United.
+            <br><br>
             <ul>
                 <li>Developed and maintained customer-facing web applications and internal management tools.</li>
-                <li>Built and maintained a guest portal with secure token-based authentication, reservation management and an AI assistant integrated with property-specific information.</li>
-                <li>Designed and implemented secure REST APIs supporting new business functionality and third-party integrations.</li>
-                <li>Expanded the database schema by introducing new entities and relationships for new product features.</li>
-                <li>Developed a custom WordPress plugin to synchronize external websites with the internal booking platform through protected API endpoints.</li>
-                <li>Supported production deployments and application maintenance using Linux, Nginx, TLS certificates and GitHub Actions.</li>
-                <li>Collaborated within a cross-functional development team working on a shared production codebase.</li>
+                <li>Built a secure guest portal with token-based authentication, reservation management and an AI assistant using property-specific information.</li>
+                <li>Designed REST APIs and expanded the database schema for new product features and business workflows.</li>
+                <li>Developed integrations, including a custom WordPress plugin and protected API endpoints.</li>
+                <li>Supported production deployments and CI/CD using Linux, Nginx, TLS certificates and GitHub Actions.</li>
             </ul>
-            <strong>Environment</strong>
-            <br>
-            JavaScript &bull; Fastify &bull; Vue.js &bull; Pinia &bull; Prisma &bull; MySQL &bull; EJS &bull; Linux &bull; Nginx &bull; GitHub Actions
         `,
         pictures: [],
         link: ''
     },
     {
         id: 2,
-        name: 'Save-Health (2022)',
-        description: 'Commercial web application with user authentication, personal accounts and form-based customer records. Built features across the application and supported backend functionality.',
+        name: 'Save-Health',
+        description: `
+            <strong>Full-Stack Developer</strong><br>
+            2022
+            <br><br>
+            Developed new features for a healthcare platform used by posture specialists as part of a two-developer Laravel and Vue.js team.
+        `,
         pictures: [],
         link: ''
     },
     {
         id: 3,
-        name: 'Amrita (July 2022 - March 2023)',
-        description: 'E-commerce website for beauty and health products. Joined an existing commercial project, fixed bugs, added features and supported backend improvements.',
+        name: 'Amrita',
+        description: `
+            <strong>Part-Time Full-Stack Developer</strong><br>
+            Jul 2022 &mdash; Mar 2023
+            <br><br>
+            Rebuilt and maintained an e-commerce platform using Laravel, Vue.js and MySQL, delivering new business features and ongoing improvements on a part-time basis.
+        `,
         pictures: [],
-        link: '<a target="_blank" href="https://amrita-shop.kiev.ua/">https://amrita-shop.kiev.ua/</a>'
+        link: ''
     },
     {
         id: 4,
-        name: 'Cac-Tour/Cac-Edu (October 2023)',
-        description: 'Commercial websites for tours and educational services. Worked on bug fixes, content-related improvements and website maintenance.',
+        name: 'CAC Tour / CAC Edu',
+        description: `
+            <strong>Backend Developer</strong><br>
+            Oct 2023
+            <br><br>
+            Fixed backend issues and implemented improvements in Fastify-based commercial applications.
+        `,
         pictures: [],
-        link: '<a target="_blank" href="https://cac-tour.com">https://cac-tour.com</a> and <a href="https://cac-edu.com.ua">https://cac-edu.com.ua</a>'
+        link: ''
     },
     {
         id: 5,
-        name: 'Estet.prom.ua (June 2023 - Now)',
-        description: 'E-commerce automation work focused on backend data processing, product parsing from websites and XML files, filtering logic and admin tooling.',
+        name: 'Estet',
+        description: `
+            <strong>Python Developer</strong><br>
+            May 2023 &mdash; 2024
+            <br><br>
+            Built data-processing tools using Python, including generating, parsing and transforming large XML datasets for product synchronisation.
+        `,
         pictures: [],
-        link: '<a target="_blank" href="https://estet.prom.ua/ua/">https://estet.prom.ua/ua/</a>'
+        link: ''
     },
     {
         id: 6,
-        name: 'RedBird.cafe (November-December 2023)',
-        description: 'Restaurant website project with AI-assisted dish recommendations. Joined an existing project and worked on bug fixes and website improvements.',
+        name: 'RedBird Cafe',
+        description: `
+            <strong>Frontend Developer</strong><br>
+            Nov 2023 &mdash; Dec 2023
+            <br><br>
+            Improved application performance and resolved production frontend issues in an existing Vue.js application.
+        `,
         pictures: [],
-        link: '<a target="_blank" href="https://www.redbird.cafe">https://www.redbird.cafe</a>'
+        link: ''
     },
 ]

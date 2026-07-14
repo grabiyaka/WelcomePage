@@ -39,9 +39,12 @@ body {
 }
 
 .header h1 {
-    display: flex;
+    display: block;
     align-items: center;
     font-size: 1.5em;
+    line-height: 1.15;
+    max-width: calc(100vw - 250px);
+    width: min-content;
 }
 
 .theme-switch {
@@ -78,7 +81,7 @@ body {
 
 .theme-switch .sun,
 .moon {
-    left: -30px;
+    left: -12px;
     opacity: 1;
 }
 
@@ -147,10 +150,16 @@ body {
     border-top: 4px solid #1e90ff;
 }
 
+.work-experience {
+    border-top: 4px solid #1e90ff;
+    text-align: left;
+}
+
 .block h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .block h3 {
@@ -194,13 +203,107 @@ body {
     margin-top: 8px;
 }
 
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-entry {
+    border-bottom: 1px solid rgba(30, 144, 255, 0.25);
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.experience-entry:first-child {
+    padding-top: 0;
+}
+
+.experience-entry:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-entry.featured {
+    padding-bottom: 20px;
+}
+
+.experience-heading {
+    align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.experience-heading h3 {
+    margin: 0;
+}
+
+.experience-role,
+.experience-date {
+    color: #555;
+    font-size: 0.95em;
+}
+
+.experience-role {
+    margin: 4px 0 0;
+}
+
+.experience-date {
+    flex: 0 0 auto;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.experience-entry p {
+    margin: 10px 0 0;
+}
+
+.experience-entry ul {
+    list-style-type: disc;
+    margin: 12px 0 0 20px;
+    padding: 0;
+}
+
+.experience-entry ul li {
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 6px 0;
+}
+
 .stack-category {
     margin-bottom: 15px;
+    text-align: left;
 }
 
 .stack-category h3,
 .stack-category p {
     margin: 5px 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-top: 8px;
+}
+
+.skill-tags span {
+    background: rgba(30, 144, 255, 0.08);
+    border: 1px solid rgba(30, 144, 255, 0.25);
+    border-radius: 999px;
+    color: #333;
+    display: inline-flex;
+    font-size: 0.9em;
+    padding: 6px 10px;
+}
+
+.language-list {
+    text-align: left;
+}
+
+.language-list p {
+    margin: 8px 0;
 }
 
 .currently-building {
@@ -216,6 +319,19 @@ body {
 
 .footer {
     flex-direction: column;
+}
+
+.contact-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    justify-content: center;
+    max-width: 900px;
+}
+
+.contact-links p {
+    margin: 4px 0;
 }
 
 .footer a{
@@ -261,6 +377,29 @@ body {
 
 .dark-theme .featured-experience {
     border-top-color: #87cefa;
+}
+
+.dark-theme .work-experience {
+    border-top-color: #87cefa;
+}
+
+.dark-theme .experience-entry {
+    border-bottom-color: rgba(135, 206, 250, 0.28);
+}
+
+.dark-theme .experience-entry:last-child {
+    border-bottom: 0;
+}
+
+.dark-theme .experience-role,
+.dark-theme .experience-date {
+    color: #d0d0d0;
+}
+
+.dark-theme .skill-tags span {
+    background: rgba(135, 206, 250, 0.12);
+    border-color: rgba(135, 206, 250, 0.35);
+    color: #f5f5f5;
 }
 
 .dark-theme a {
@@ -446,11 +585,27 @@ body {
     .name-info {
         margin-right: 50px;
     }
+
+    .experience-heading {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 2px;
+    }
 }
 
 @media (max-width: 480px) {
     .header {
         justify-content: flex-start;
+        box-sizing: border-box;
+        padding: 16px 84px 16px 12px;
     }
 
     .header img {
@@ -460,17 +615,29 @@ body {
     }
 
     .header h1 {
-        font-size: 1em;
-        max-width: 155px;
+        display: block;
+        flex-wrap: wrap;
+        font-size: 0.95em;
+        line-height: 1.15;
+        margin: 0;
+        max-width: 115px;
     }
 
     .theme-switch {
-        right: 5px;
+        right: 8px;
+        transform: translateY(-50%) scale(0.85);
+        transform-origin: right center;
+    }
+
+    .theme-switch .sun,
+    .theme-switch .moon {
+        left: -16px;
     }
 
     .name-info {
         justify-content: flex-start;
-        margin-right: 95px;
+        margin-right: 0;
+        min-width: 0;
     }
 
     .footer p {
