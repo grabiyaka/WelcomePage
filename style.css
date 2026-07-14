@@ -53,6 +53,9 @@ body {
     transform: translateY(-50%);
     display: flex;
     align-items: center;
+    height: 34px;
+    justify-content: center;
+    width: 100px;
 }
 
 .theme-switch input {
@@ -75,16 +78,18 @@ body {
 .theme-switch .moon {
     font-size: 18px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     transition: opacity 0.3s;
 }
 
-.theme-switch .sun,
-.moon {
-    left: -12px;
+.theme-switch .sun {
+    left: 0;
     opacity: 1;
 }
 
-.moon {
+.theme-switch .moon {
+    right: 0;
     opacity: 0;
 }
 
@@ -626,11 +631,6 @@ body {
         right: 8px;
         transform: translateY(-50%) scale(0.85);
         transform-origin: right center;
-    }
-
-    .theme-switch .sun,
-    .theme-switch .moon {
-        left: -16px;
     }
 
     .name-info {
